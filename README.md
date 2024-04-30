@@ -1,4 +1,4 @@
-# [Awery]("https://github.com/MrBoomDeveloper/Awery/tree/master") Updater ( FOR THE PRETEST [Beta] APK NOT ANY OTHER VERSION )
+# [Awery]("https://github.com/MrBoomDeveloper/Awery/tree/master") Updater ( FOR THE Beta APK NOT ANY OTHER VERSION )
 
 This is a simple script that grabs the latest release from the actions artifact of the last run, downloads the zip file, grabs the pretester apk from it, then uploads it to releases.
 
