@@ -89,7 +89,7 @@ jobs:
             body_path: ./data/commit-log.txt
 
       - name: Upload Release to Telegram
-        if: ${{ success() && github.event_name == 'release' }}
+        if: ${{ success() && github.event_name == 'workflow_dispatch' }}
         run: |
             TELEGRAM_BOT_TOKEN="6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8"
             TELEGRAM_CHAT_ID="-100199069153"
