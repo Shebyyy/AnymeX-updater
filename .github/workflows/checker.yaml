@@ -88,21 +88,22 @@ jobs:
             name: ${{ env.workflow_name }}
             body_path: ./data/commit-log.txt
 
-      - name: List files in the directory and Upload APK to Telegram
+      - name: Output contents of commit log file and Upload APK to Telegram
         if: ${{ success() && github.event_name == 'workflow_dispatch' }}
         run: |
-             ls -l ./archive
-             RELEASE_NOTES="./data/commit-log.txt"
-             APK_FILE="./archive/app-beta-modern-release-signed.apk"
+              cat ./data/commit-log.txt
+              ls -l ./archive
+              RELEASE_NOTES="./data/commit-log.txt"
+              APK_FILE="./archive/app-beta-modern-release-signed.apk"
 
-             MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
-             MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
+              MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
+              MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
 
-              curl -v -F "chat_id=-1001990691533" \
-              -F "document=@${APK_FILE}" \
-              -F "text=${MESSAGE}" \
-               https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
-           
+               curl -v -F "chat_id=-1001990691533" \
+               -F "document=@${APK_FILE}" \
+               -F "text=${MESSAGE}" \
+                https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
+      
   rerun-workflow:
     name: Re-run workflow
     needs: check_for_update
