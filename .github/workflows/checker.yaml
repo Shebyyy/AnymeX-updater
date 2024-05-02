@@ -91,7 +91,7 @@ jobs:
       - name: List files in the directory and Upload APK to Telegram
         if: ${{ success() && github.event_name == 'workflow_dispatch' }}
         run: |
-             ls -l ./data
+             ls -l ./archive
              RELEASE_NOTES="./data/commit-log.txt"
              APK_FILE="./archive/*.apk"
 
