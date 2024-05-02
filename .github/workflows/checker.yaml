@@ -87,22 +87,6 @@ jobs:
                   name: ${{ env.workflow_name }}
                   body_path: ./data/commit-log.txt
 
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4
-      with:
-          name: Awery
-          retention-days: 5
-          compression-level: 9
-          path: "./archive/*.apk"
-
-    - name: Upload APK to Telegram
-      shell: bash
-      run: |
-        #Telegram
-        curl -F "chat_id=-1001990691533" \
-             -F "document=@./archive/*.apk" \
-             https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
-
     rerun-workflow:
         name: Re-run workflow
         needs: check_for_update
