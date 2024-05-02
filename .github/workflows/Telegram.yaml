@@ -1,0 +1,35 @@
+name: Upload Release to Telegram
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload_release_to_telegram:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Release Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: your-release-artifact-name # Specify the name of your release artifact
+          path: ./downloaded_release
+
+      - name: Upload Release to Telegram
+        if: success()
+        run: |
+          # Define your Telegram bot token and chat ID
+          TELEGRAM_BOT_TOKEN="6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8"
+          TELEGRAM_CHAT_ID="-1001990691533"
+
+          # Set the release notes file path
+          RELEASE_NOTES="./downloaded_release/release_notes.txt"
+
+          # Compose the release message
+          MESSAGE="New release: ${{ github.event.release.tag_name }}"
+          MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
+
+          # Upload the release message to Telegram
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d "chat_id=${TELEGRAM_CHAT_ID}" \
+            -d "text=${MESSAGE}"
+            
