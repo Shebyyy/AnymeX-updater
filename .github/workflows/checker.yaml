@@ -88,16 +88,16 @@ jobs:
             name: ${{ env.workflow_name }}
             body_path: ./data/commit-log.txt
 
-- name: Upload APK to Telegram
-  if: ${{ success() && github.event_name == 'workflow_dispatch' }}
-  run: |
-      RELEASE_NOTES="./data/commit-log.txt"
-      APK_FILE="./archive/*.apk"
+      - name: Upload APK to Telegram
+        if: ${{ success() && github.event_name == 'workflow_dispatch' }}
+        run: |
+              RELEASE_NOTES="./data/commit-log.txt"
+              APK_FILE="./archive/*.apk"
 
-      MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
-      MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
+              MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
+              MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
 
-      curl -F "chat_id=-1001990691533" \
+           curl -F "chat_id=-1001990691533" \
            -F "document=@${APK_FILE}" \
            -F "text=${MESSAGE}" \
            https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
