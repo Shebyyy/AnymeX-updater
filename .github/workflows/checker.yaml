@@ -98,7 +98,7 @@ jobs:
              MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
              MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
 
-              curl -F "chat_id=-1001990691533" \
+              curl -v -F "chat_id=-1001990691533" \
               -F "document=@${APK_FILE}" \
               -F "text=${MESSAGE}" \
                https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
