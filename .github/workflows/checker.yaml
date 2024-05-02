@@ -91,16 +91,13 @@ jobs:
       - name: Upload Release to Telegram
         if: ${{ success() && github.event_name == 'workflow_dispatch' }}
         run: |
-            TELEGRAM_BOT_TOKEN="6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8"
-            TELEGRAM_CHAT_ID="199069153"
-
             RELEASE_NOTES="./data/commit-log.txt"
 
             MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
             MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
 
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-              -d "chat_id=${TELEGRAM_CHAT_ID}" \
+            curl -s -X POST "https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendMessage" \
+              -d  "chat_id=-1001990691533" \
               -d "text=${MESSAGE}"
 
   rerun-workflow:
