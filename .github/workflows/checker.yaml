@@ -93,7 +93,7 @@ jobs:
         run: |
              ls -l ./archive
              RELEASE_NOTES="./data/commit-log.txt"
-             APK_FILE="./archive/*.apk"
+             APK_FILE="./archive/app-beta-modern-release-signed.apk"
 
              MESSAGE="New release: ${{ steps.publish-release.outputs.tag_name }}"
              MESSAGE+="\n\nRelease Notes:\n$(cat $RELEASE_NOTES)"
