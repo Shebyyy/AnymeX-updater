@@ -23,6 +23,10 @@ jobs:
       - name: Make Temporary Files
         run: echo "$(jq -r '.["commit-log"]' data/info.json)" > ./data/commit-log.txt
 
+      - name: Set Environment Variables
+        run: | 
+         echo "./archive/app-beta-modern-release-signed.apk" >> $GITHUB_ENV
+
       - name: Get Apk Info
         if: ${{ env.status == 'success' }}
         uses: hkusu/apk-info-action@v1
