@@ -90,12 +90,18 @@ jobs:
       - name: Upload APK to Telegram
         if: ${{ success() && github.event_name == 'workflow_dispatch' }}
         run: |
-          APK_FILE="./archive/app-beta-modern-release-signed.apk"
+          APK_FILE1="./archive/app-beta-modern-release-signed.apk"
+          APK_FILE2="./archive/app-beta-legacy-release-signed.apk"
+          APK_FILE3="./archive/app-prod-legacy-release-signed.apk"
+          APK_FILE4="./archive/app-prod-modern-release-signed.apk"
           COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
           MESSAGE="New release: $COMMIT_MESSAGE"
 
           curl -v -F "chat_id=-1001990691533" \
-               -F "document=@${APK_FILE}" \
+               -F "document=@${APK_FILE1}" \
+               -F "document=@${APK_FILE2}" \
+               -F "document=@${APK_FILE3}" \
+               -F "document=@${APK_FILE4}" \
                -F "caption=${MESSAGE}" \
                https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
 
