@@ -4,10 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  status: failure
-  workflow_name: none
-  apk-path: none
-  repo-title: none
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   check_for_update:
@@ -19,7 +16,7 @@ jobs:
       - name: Run Main.go
         id: run-main
         run: |
-             go run ./src/main.go --token="${{ secrets.GITHUB_TOKEN }}"
+          go run ./src/main.go --token="${{ secrets.GITHUB_TOKEN }}"
 
       - name: Set Environment Variables
         run: |
@@ -40,7 +37,7 @@ jobs:
         with:
           apk-path: ${{ env.apk-path }}
 
-- name: Commit Changes
+      - name: Commit Changes
         run: |
           git config --global user.email "${{ secrets.EMAIL }}"
           git config --global user.name "${{ github.repository_owner }}"
@@ -58,7 +55,7 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/releases | jq -r '.[] | .id' | sort -nr)
 
-for release in $releases; do
+          for release in $releases; do
             curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Accept: application/vnd.github.v3+json" \
               https://api.github.com/repos/${{ github.repository }}/releases/$release
@@ -78,7 +75,7 @@ for release in $releases; do
           done
         if: ${{ env.status == 'success' }}
 
-- name: Publish Release
+      - name: Publish Release
         uses: softprops/action-gh-release@v2
         if: ${{ env.status == 'success' }}
         with:
@@ -87,10 +84,10 @@ for release in $releases; do
           name: ${{ env.workflow_name }}
           body_path: ./data/commit-log.txt
 
-
       - name: Upload APK to Telegram
         if: ${{ success() && github.event_name == 'workflow_dispatch' }}
-COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
+        run: |
+          COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
           MESSAGE="$COMMIT_MESSAGE"
         uses: peter-evans/telegram-send@v2 
         with:
@@ -100,9 +97,8 @@ COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
           caption: |
             **New Awery Beta Update Available**
             *Commit:* ${{ MESSAGE }} 
-            [View on GitHub] (https://github.com/${{ github.repository }}/commit/${{github.event.head_commit.id }})
-          document:  ./archive/app-beta-modern-release-signed.apk
-
+            [View on GitHub](https://github.com/${{ github.repository }}/commit/${{github.event.head_commit.id }})
+          document: ./archive/app-beta-modern-release-signed.apk
 
   rerun-workflow:
     name: Re-run workflow
@@ -122,8 +118,6 @@ COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
           fi
 
       - name: Re-trigger workflow
-        run: gh workflow run
- checker.yaml
+        run: gh workflow run checker.yaml
 env:
-     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     GH_REPO: ${{ github.repository }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
