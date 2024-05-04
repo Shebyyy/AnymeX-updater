@@ -55,10 +55,6 @@ jobs:
       - name: Upload APK to Telegram
         if: ${{ success() && github.event_name == 'workflow_dispatch' }}
         run: |
-          APK_FILE1="./archive/app-beta-modern-release-signed.apk"
-          APK_FILE2="./archive/app-beta-legacy-release-signed.apk"
-          APK_FILE3="./archive/app-prod-legacy-release-signed.apk"
-          APK_FILE4="./archive/app-prod-modern-release-signed.apk"
           COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
           MESSAGE="Beta release: $COMMIT_MESSAGE"
 
