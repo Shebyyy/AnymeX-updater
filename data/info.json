@@ -1,1 +1,1 @@
-{"commit-log":"- Use correct thumbnails order,\nFancier episodes list,\nFixed crash when failed to load episodes list ~MrBoomDev","status":"success","elapsed-time":6696.125124995,"workflow":{"id":8968946507,"title":"Use correct thumbnails order,"}}
+{"commit-log":"- Mark individual episodes as watched and remove this mark by a button,\nFixed crash when trying to search media after the episodes list was shown ~MrBoomDev","status":"success","elapsed-time":4969.160101082,"workflow":{"id":8970185057,"title":"Mark individual episodes as watched and remove this mark by a button,"}}
