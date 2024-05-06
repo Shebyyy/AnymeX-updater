@@ -1,1 +1,1 @@
-{"commit-log":"- Mark individual episodes as watched and remove this mark by a button,\nFixed crash when trying to search media after the episodes list was shown ~MrBoomDev","status":"success","elapsed-time":4969.160101082,"workflow":{"id":8970185057,"title":"Mark individual episodes as watched and remove this mark by a button,"}}
+{"commit-log":"- Fixed not working likes and dislikes,\nFixed bug when you can't leave the comments menu ~MrBoomDev","status":"success","elapsed-time":1620.547939925,"workflow":{"id":8970572268,"title":"Fixed not working likes and dislikes,"}}
