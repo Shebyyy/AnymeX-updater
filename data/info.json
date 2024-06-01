@@ -1,1 +1,1 @@
-{"commit-log":"- Check if the database has been corrupted at the startup,\nLazily create the database instance,\nSet the actual android version in the user agent ~MrBoomDev","status":"success","elapsed-time":16051.538692358,"workflow":{"id":9330983593,"title":"Check if the database has been corrupted at the startup,"}}
+{"commit-log":"- Clear cache buttons,\nUpdated some icons,\nFixed crash ~MrBoomDev","status":"success","elapsed-time":6091.286496442,"workflow":{"id":9331545054,"title":"Clear cache buttons,"}}
