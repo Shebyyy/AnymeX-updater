@@ -81,25 +81,6 @@ jobs:
           name: ${{ env.workflow_name }}
           body_path: ./data/commit-log.txt
           draft: false
-
-      - name: Upload APK to Telegram
-        if: ${{ success() && github.event_name == 'workflow_dispatch' }}
-        run: |
-          COMMIT_MESSAGE=$(cat ./data/commit-log.txt)
-          MESSAGE="Beta release: $COMMIT_MESSAGE"
-          curl -v -F "chat_id=-1001990691533" \
-               -F "document=@./archive/app-beta-modern-release-signed.apk" \
-               -F "caption=${MESSAGE}" \
-               https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
-          curl -v -F "chat_id=-1001990691533" \
-               -F "document=@./archive/app-beta-legacy-release-signed.apk" \
-               https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
-          curl -v -F "chat_id=-1001990691533" \
-               -F "document=@./archive/app-prod-legacy-release-signed.apk" \
-               https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
-          curl -v -F "chat_id=-1001990691533" \
-               -F "document=@./archive/app-prod-modern-release-signed.apk" \
-               https://api.telegram.org/bot6466986906:AAFNxh2KOe-E1z4Khwlc0AMngWz0UwVmOT8/sendDocument
                
   rerun-workflow:
     name: Re-run workflow
