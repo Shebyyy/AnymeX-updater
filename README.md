@@ -2,7 +2,7 @@
 
 # To Download Stable Version
 
-Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases/latest)
+Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
 
 ## Usage
 
