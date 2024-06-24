@@ -1,4 +1,4 @@
-# [Awery](https://github.com/MrBoomDeveloper/Awery) Updater ( FOR THE Beta APK NOT ANY OTHER VERSION )
+# [Awery](https://github.com/MrBoomDeveloper/Awery) Updater ( FOR THE Alpha APK NOT ANY OTHER VERSION )
 
 # To Download Stable Version
 
