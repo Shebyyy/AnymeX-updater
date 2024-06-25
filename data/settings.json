@@ -2,7 +2,7 @@
 	"workflow": {
 		"owner": "MrBoomDeveloper",
 		"repo": "Awery",
-		"name": "android.yml",
+		"name": "publish_alpha.yml",
 		"branch": "master"
 	},
 	"delay": 10
