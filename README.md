@@ -20,7 +20,7 @@ Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
     </tr>
     <tr>
       <td>Discord</td>
-      <td><a href="https://discord.com/invite/yspVzD4Kbm"><img src="[https://img.shields.io/discord/1255770492049162240?label=discord&labelColor=7289da&color=2c2f33&style=for-the-badge" alt="Discord](https://dcbadge.limes.pink/api/server/https://discord.com/invite/yspVzD4Kbm" alt="Discord Server")"></a></td>
+      <td><a href="https://discord.com/invite/yspVzD4Kbm"><img src="?label=discord&labelColor=7289da&color=2c2f33&style=for-the-badge" alt="Discord"></a></td>
     </tr>
   </table>
 </div>
