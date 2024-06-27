@@ -7,8 +7,8 @@ Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
 <div>
   <table>
     <tr>
-      <td>CI Build</td>
-      <td><a href="https://github.com/MrBoomDeveloper/Awery/actions/workflows/Build.yml"><img src="https://img.shields.io/github/actions/workflow/status/MrBoomDeveloper/Awery/Build.yml?label=CI+Build&style=for-the-badge" alt="CI"></a></td>
+      <td>Alpha Build</td>
+      <td><a href="https://github.com/MrBoomDeveloper/Awery/actions/workflows/publish_alpha.yml"><img src="https://img.shields.io/github/actions/workflow/status/MrBoomDeveloper/Awery/Build.yml?label=CI+Build&style=for-the-badge" alt="CI"></a></td>
     </tr>
     <tr>
       <td>Pre-release</td>
