@@ -8,11 +8,11 @@ Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
   <table>
     <tr>
       <td>Alpha Build</td>
-      <td><a href="https://github.com/MrBoomDeveloper/Awery/actions/workflows/publish_alpha.yml"><img src="https://img.shields.io/github/actions/workflow/status/MrBoomDeveloper/Awery/Build.yml?label=CI+Build&style=for-the-badge" alt="CI"></a></td>
+      <td><a href="https://github.com/MrBoomDeveloper/Awery/actions/workflows/publish_alpha.yml"><img src="https://img.shields.io/github/actions/workflow/status/MrBoomDeveloper/Awery/Build.yml?label=Alpha+Build&style=for-the-badge" alt="CI"></a></td>
     </tr>
     <tr>
       <td>Pre-release</td>
-      <td><a href="https://github.com/MrBoomDeveloper/Awery/releases/pre-release"><img src="https://img.shields.io/github/downloads/MrBoomDeveloper/Awery/pre-release/total?style=for-the-badge" alt="pre-release build"></a></td>
+      <td><a href="https://github.com/MrBoomDeveloper/Awery/releases/pre-release"><img src="https://img.shields.io/github/downloads/MrBoomDeveloper/Awery/total?style=for-the-badge" alt="Pre-release Downloads" alt="pre-release build"></a></td>
     </tr>
     <tr>
       <td>Stable</td>
@@ -20,7 +20,7 @@ Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
     </tr>
     <tr>
       <td>Discord</td>
-      <td><a href="https://discord.com/invite/yspVzD4Kbm"><img src="https://img.shields.io/discord/1255770492049162240?label=discord&labelColor=7289da&color=2c2f33&style=for-the-badge" alt="Discord"></a></td>
+      <td><a href="https://discord.com/invite/yspVzD4Kbm"><img src="[https://img.shields.io/discord/1255770492049162240?label=discord&labelColor=7289da&color=2c2f33&style=for-the-badge" alt="Discord](https://dcbadge.limes.pink/api/server/https://discord.com/invite/yspVzD4Kbm" alt="Discord Server")"></a></td>
     </tr>
   </table>
 </div>
