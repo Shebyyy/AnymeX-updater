@@ -4,26 +4,6 @@
 
 Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
 
-<div>
-  <table>
-    <tr>
-      <td>Alpha Build</td>
-      <td><a href="https://github.com/MrBoomDeveloper/Awery/actions/workflows/publish_alpha.yml"><img src="https://img.shields.io/github/actions/workflow/status/MrBoomDeveloper/Awery/Build.yml?label=Alpha+Build&style=for-the-badge" alt="CI"></a></td>
-    </tr>
-    <tr>
-      <td>Pre-release</td>
-      <td><a href="https://github.com/MrBoomDeveloper/Awery/releases/pre-release"><img src="https://img.shields.io/github/downloads/MrBoomDeveloper/Awery/total?style=for-the-badge" alt="Pre-release Downloads" alt="pre-release build"></a></td>
-    </tr>
-    <tr>
-      <td>Stable</td>
-      <td><a href="https://github.com/MrBoomDeveloper/Awery/releases/latest"><img src="https://img.shields.io/github/release/MrBoomDeveloper/Awery.svg?maxAge=3600&label=download&style=for-the-badge" alt="stable release"></a></td>
-    </tr>
-    <tr>
-      <td>Discord</td>
-      <td><a href="https://discord.com/invite/yspVzD4Kbm"><img src="?label=discord&labelColor=7289da&color=2c2f33&style=for-the-badge" alt="Discord"></a></td>
-    </tr>
-  </table>
-</div>
 
 ## Usage
 
