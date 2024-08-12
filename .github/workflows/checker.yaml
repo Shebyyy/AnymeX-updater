@@ -81,6 +81,23 @@ jobs:
           name: ${{ env.workflow_name }}
           body_path: ./data/commit-log.txt
           draft: false
+
+      - name: Upload Alpha APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: "Alpha APK"
+          retention-days: 90
+          path: "app/build/outputs/apk/alpha/release/app-alpha-release-signed.apk"
+
+      - name: Send Alpha APK to Telegram
+        if: always()
+        run: |
+          COMMIT_LOG=$(cat commit_log.txt)
+          COMMIT_LOG=$(echo "$COMMIT_LOG" | sed 's/%0A/\n/g; s/^/\n/')
+          curl -F document=@app/build/outputs/apk/alpha/release/app-alpha-release-signed.apk \
+          -F chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+          -F caption="Alpha Release $COMMIT_LOG" \
+          https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendDocument
                
   rerun-workflow:
     name: Re-run workflow
