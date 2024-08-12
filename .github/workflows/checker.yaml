@@ -85,8 +85,8 @@ jobs:
       - name: Send Alpha APK to Telegram
         if: always()
         run: |
-          echo "COMMIT_LOG=$(jq -r '.commit-log' data/info.json)" >> $COMMIT_LOG
-          COMMIT_LOG=$(echo "$COMMIT_LOG" | sed 's/%0A/\n/g; s/^/\n/')
+         COMMIT_LOG=$(jq -r '.["commit-log"]' data/info.json)
+         COMMIT_LOG=$(echo "$COMMIT_LOG" | sed 's/%0A/\n/g; s/^/\n/')
           curl -F document=@./archive/app-alpha-release-signed.apk \
           -F chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
           -F caption="Alpha Release $COMMIT_LOG" \
