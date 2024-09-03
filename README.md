@@ -31,8 +31,7 @@ For a more stable experience or to access previously tested features, you can do
 
 - **Backup Your Data**: Always back up your data before installing new versions to prevent any potential loss.
 - **Release Notes**: Check out the release notes on the [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases) page for details about what's new, what's fixed, and any changes.
-- **Feedback**: If you encounter any issues or have suggestions, please contribute to our community discussions or open an issue on GitHub.
-[Awery](https://github.com/MrBoomDeveloper/Awery)
+- **Feedback**: If you encounter any issues or have suggestions, please contribute to our community discussions or open an issue on [Awery](https://github.com/MrBoomDeveloper/Awery)
 
 
 Thank you for being part of the Awery community and helping us improve with your valuable feedback!
