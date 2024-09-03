@@ -7,7 +7,7 @@ Welcome to the **Awery Updater**! This tool is specifically for downloading the 
 ## 🚀 Get the Alpha Version
 
 Stay ahead of the curve by trying out the latest features still in development!  
-**Download the Alpha APK here:** [Awery Alpha](https://github.com/MrBoomDeveloper/Awery)
+**Download the Alpha APK here:** [Awery Alpha](https://github.com/Shebyyy/Awery-updater/releases)
 
 ---
 
