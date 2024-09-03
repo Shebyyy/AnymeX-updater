@@ -1,19 +1,38 @@
-# [Awery](https://github.com/MrBoomDeveloper/Awery) Updater ( FOR THE Alpha APK NOT ANY OTHER VERSION )
+# Awery Updater
 
-# To Download Beta or Stable Version 👇
+Welcome to the **Awery Updater**! This tool is specifically for downloading the **Alpha APK** version of Awery. For other versions, please refer to the instructions below.
 
-Click > [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
+---
+
+## 🚀 Get the Alpha Version
+
+Stay ahead of the curve by trying out the latest features still in development!  
+**Download the Alpha APK here:** [Awery Alpha](https://github.com/MrBoomDeveloper/Awery)
+
+---
+
+## 📥 Download Beta or Stable Versions
+
+For a more stable experience or to access previously tested features, you can download either the Beta or Stable versions of Awery.  
+
+**Explore all available releases:** [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases)
+
+---
+
+## 🛠 How to Use
+
+1. **Alpha Version**: Ideal for users who want to test the newest features and don't mind occasional bugs or instability.
+2. **Beta Version**: Suitable for users who want to try new features with fewer bugs than the Alpha version.
+3. **Stable Version**: Best for users who prefer a reliable and tested experience.
+
+---
+
+## ℹ️ Additional Information
+
+- **Backup Your Data**: Always back up your data before installing new versions to prevent any potential loss.
+- **Release Notes**: Check out the release notes on the [Awery Releases](https://github.com/MrBoomDeveloper/Awery/releases) page for details about what's new, what's fixed, and any changes.
+- **Feedback**: If you encounter any issues or have suggestions, please contribute to our community discussions or open an issue on GitHub.
+[Awery](https://github.com/MrBoomDeveloper/Awery)
 
 
-## Usage
-
-Download [Obtainium](https://github.com/ImranR98/Obtainium) then add this repository link to Obtainium.
-
-Make sure to toggle these settings when you add it to Obtainium
-- Verify the 'latest' tag
-- Reconcile string with version detected from OS
-
-## Note
-This is a simple script that grabs the latest release from the actions artifact of the last run, downloads the zip file, grabs the pretester apk from it, then uploads it to releases.
-
-This is written in [go](https://go.dev/) and utilizes github workflows to run the script continuously.
+Thank you for being part of the Awery community and helping us improve with your valuable feedback!
