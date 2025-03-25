@@ -82,15 +82,6 @@ jobs:
           body_path: ./data/commit-log.txt
           draft: false
           
-      - name: Send Alpha APK to Telegram
-        if: always()
-        run: |
-         COMMIT_LOG=$(jq -r '.["commit-log"]' data/info.json)
-         COMMIT_LOG=$(echo "$COMMIT_LOG" | sed 's/%0A/\n/g; s/^/\n/')
-          curl -F document=@./archive/app-alpha-release-signed.apk \
-          -F chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-          -F caption="Alpha Release $COMMIT_LOG" \
-          https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendDocument
                
   rerun-workflow:
     name: Re-run workflow
