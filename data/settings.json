@@ -1,9 +1,9 @@
 {
 	"workflow": {
-		"owner": "MrBoomDeveloper",
-		"repo": "Awery",
-		"name": "publish_alpha.yml",
-		"branch": "master"
+		"owner": "Shebyyy",
+		"repo": "AnymeX",
+		"name": "build.yml",
+		"branch": "beta"
 	},
 	"delay": 10
 }
